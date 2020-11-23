@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MEXM.IO</title>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1 " > <!--, maximum-scale=1.0, user-scalable=0-->
+
+    <!-- Стили CSS-->
+    <link href="css/style.min.css" rel="stylesheet" />
+
+    <!-- Скривты JavaScript-->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+
+    <script src="js/script.min.js"></script>
+
+    <!-- Иконка-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+
+</head>
+<body class="list">
+<div class="wrapper-list">
+<header class="header">
+    <div class="header__wrapper _container">
+        <div class="header__logo">
+            <picture><source srcset="img/logo.svg" type="image/webp"><img src="img/logo.svg" alt="logo"></picture>
+        </div>
+        <nav class="header__nav main-nav">
+            <div class="main-nav__wrapper">
+                <div class="main-nav__header">
+                    <p>Меню</p>
+                </div>
+                <ul class="nav-first">
+                    <li>
+                        <a href="#">Проводник <span></span></a>
+                        <ul class="nav-second">
+                            <li>
+                                <a href="#">Bitcoin<span></span></a>
+                                <div class="nav-third">
+                                    <ul>
+                                        <li>Блокчейн</li>
+                                        <li><a href="#">Блоки</a></li>
+                                        <li><a href="#">Транзакции</a></li>
+                                        <li><a href="#">Выходы</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li>Мемпул</li>
+                                        <li><a href="#">Транзакции</a></li>
+                                        <li><a href="#">Выходы</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">Ethereum<span></span></a>
+                                <div class="nav-third">
+                                    <ul>
+                                        <li>Блокчейн</li>
+                                        <li><a href="#">Блоки</a></li>
+                                        <li><a href="#">Транзакции</a></li>
+                                        <li><a href="#">Выходы</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li>Мемпул</li>
+                                        <li><a href="#">Транзакции</a></li>
+                                        <li><a href="#">Выходы</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">Litecoin<span></span></a>
+                                <div class="nav-third">
+                                    <ul>
+                                        <li>Блокчейн</li>
+                                        <li><a href="#">Блоки</a></li>
+                                        <li><a href="#">Транзакции</a></li>
+                                        <li><a href="#">Выходы</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li>Мемпул</li>
+                                        <li><a href="#">Транзакции</a></li>
+                                        <li><a href="#">Выходы</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Сервисы <span></span></a>
+                        <ul class="nav-second">
+                            <li>
+                                <a href="#">API</a>
+                            </li>
+                            <li>
+                                <a href="#">Анализ</a>
+                            </li>
+                            <li>
+                                <a href="#">Графики</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Другое <span></span></a>
+                        <ul class="nav-second">
+                            <li>
+                                <a href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#">Связаться с нами</a>
+                            </li>
+                            <li>
+                                <a href="#">Политика конфиденциальности</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="main-nav__footer footer-nav">
+                    <div class="footer-nav__language language">
+                        <div class="language__header">
+                            <p>Локализация</p>
+                        </div>
+                        <div class="language__body">
+                            <a href="#">Русский</a>
+                            <a href="#">English</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="header__form not-search">
+            <div class="header__form-wrapper form-wrapper">
+                <input type="search" placeholder="Поиск в блокчейн">
+                <button class="main-unit__button"></button>
+            </div>
+        </div>
+        <div class="burger">
+            <span></span>
+        </div>
+
+        <div class="header__plug"></div>
+    </div>
+
+</header>
+    <div class="content">
+        <div class="content__wrapper _container">
+            <div class="block-1">
+                <div class="block-1__header header-content">
+                    <div class="bread-crumbs">
+                        <div class="bread-crumbs__wrapper">
+                            <div class="bread-crumbs__text">
+                                <p class="bread-crumbs__last"><a href="#"><span></span>Bitcoin</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="super-link">
+                        <a href="#">
+                            <span class="super-link__span-text">
+                                Ссылка
+                            </span>
+                            <span class="super-link__span">
+                                <picture><source srcset="img/icon/super-link.svg" type="image/webp"><img src="img/icon/super-link.svg" alt="link"></picture>
+                            </span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="block-1__body statistics">
+                    <div class="statistics__header">
+                        <div class="statistics__currency currency-s">
+                            <div class="currency-s__logo">
+                                <picture><source srcset="img/currency/bitcoin.svg" type="image/webp"><img src="img/currency/bitcoin.svg" alt="bitcoin"></picture>
+                            </div>
+                            <div class="currency-s__title">
+                                <p class="currency-s__title-p">Bitcoin</p>
+                            </div>
+                        </div>
+                        <div class="statistics__prices prices-s">
+                            <div class="prices-s__price">
+                                <p>$8,838.86 <span>(-4.47%)</span></p>
+                            </div>
+                            <div class="prices-s__capital">
+                                <p>Капитализация: <span>$162Млрд</span></p>
+                            </div>
+                            <div class="prices-s__share">
+                                <p>Доля: <span>65.19%</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="statistics__body">
+                        <div class="statistics__mini-blocks mini-blocks">
+                            <div class="mini-blocks__content">
+                                <div class="mini-blocks__header header_b">
+                                    <h3>Статистика</h3>
+                                </div>
+                                <div class="mini-blocks__body block-mini">
+                                    <div class="block-mini__wrapper">
+                                        <div class="block-mini__cell">
+                                            <div class="block-mini__b">
+                                                <p class="block-mini__text">Всего в обороте:</p>
+                                                <p class="block-mini__number">18,385,327 BTC</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-mini__wrapper">
+                                        <div class="block-mini__cell">
+                                            <div class="block-mini__b">
+                                                <p class="block-mini__text">Сложность сети:</p>
+                                                <p class="block-mini__number">15,138T</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-mini__wrapper">
+                                        <div class="block-mini__cell">
+                                            <div class="block-mini__b">
+                                                <p class="block-mini__text">Размер блокчейна:</p>
+                                                <p class="block-mini__number">279.09 Гб</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-mini__wrapper">
+                                        <div class="block-mini__cell">
+                                            <div class="block-mini__b">
+                                                <p class="block-mini__text text_b width-auto">Время последнего блока:</p>
+                                                <p class="block-mini__number">25.05.20 12:46</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-mini__wrapper">
+                                        <div class="block-mini__cell">
+                                            <div class="block-mini__b">
+                                                <p class="block-mini__text">Сетевых узлов:</p>
+                                                <p class="block-mini__number">8,053</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="mini-blocks__content">
+                                <div class="mini-blocks__header">
+                                    <h3>За сутки</h3>
+                                </div>
+                                <div class="mini-blocks__body block-mini">
+                                    <div class="block-mini__wrapper">
+                                        <div class="block-mini__cell">
+                                            <div class="block-mini__b">
+                                                <p class="block-mini__text">Всего блоков:</p>
+                                                <p class="block-mini__number">119</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-mini__wrapper">
+                                        <div class="block-mini__cell">
+                                            <div class="block-mini__b">
+                                                <p class="block-mini__text">Количество транзакций:</p>
+                                                <p class="block-mini__number">244,566</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-mini__wrapper">
+                                        <div class="block-mini__cell">
+                                            <div class="block-mini__b">
+                                                <p class="block-mini__text text_b">Дневной оборот:</p>
+                                                <p class="block-mini__number">815,547 BTC </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-mini__wrapper">
+                                        <div class="block-mini__cell">
+                                            <div class="block-mini__b">
+                                                <p class="block-mini__text text_b">Хешрейт сети:</p>
+                                                <p class="block-mini__number">88.82 Eh/s</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-mini__wrapper">
+                                        <div class="block-mini__cell">
+                                            <div class="block-mini__b">
+                                                <p class="block-mini__text text_b">Среднее время блока:</p>
+                                                <p class="block-mini__number">726.05 с.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mini-blocks__content">
+                                <div class="mini-blocks__header">
+                                    <h3>Мемпул</h3>
+                                </div>
+                                <div class="mini-blocks__body block-mini">
+                                    <div class="block-mini__wrapper">
+                                        <div class="block-mini__cell">
+                                            <div class="block-mini__b">
+                                                <p class="block-mini__text text_b">Рекомендуемая комиссия:</p>
+                                                <p class="block-mini__number">6 Сат/байт</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-mini__wrapper">
+                                        <div class="block-mini__cell">
+                                            <div class="block-mini__b">
+                                                <p class="block-mini__text">Транзакций:</p>
+                                                <p class="block-mini__number">17,423</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-mini__wrapper">
+                                        <div class="block-mini__cell">
+                                            <div class="block-mini__b">
+                                                <p class="block-mini__text text_b">Транзакций в секунду:</p>
+                                                <p class="block-mini__number">3.27</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-mini__wrapper">
+                                        <div class="block-mini__cell">
+                                            <div class="block-mini__b">
+                                                <p class="block-mini__text text_b">Сумма комиссия:</p>
+                                                <p class="block-mini__number">$13,818.79</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-mini__wrapper">
+                                        <div class="block-mini__cell">
+                                            <div class="block-mini__b">
+                                                <p class="block-mini__text text_b">Размер:</p>
+                                                <p class="block-mini__number">100.53 Мб</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="statistics__mini-info info-s">
+                            <div class="info-s__wrapper">
+                                <div class="info-s__column column">
+                                    <div class="column__wrapper">
+                                        <div class="column__cell">
+                                            <div class="info-s__ico">
+                                                <picture><source srcset="img/info-s/icon-1.svg" type="image/webp"><img src="img/info-s/icon-1.svg" alt="icon-1"></picture>
+                                            </div>
+
+                                            <div class="info-s__text text-info">
+                                                <div class="text-info__title">
+                                                    <p>Блоков</p>
+                                                </div>
+                                                <div class="text-info__number">
+                                                    <p>631,630</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--
+                                    <div class="column__wrapper">
+                                        <div class="column__cell">
+                                            <div class="info-s__ico">
+                                                <picture><source srcset="img/info-s/icon-2.svg" type="image/webp"><img src="img/info-s/icon-2.svg" alt="icon-1"></picture>
+                                            </div>
+                                            <div class="info-s__text text-info">
+                                                <div class="text-info__title">
+                                                    <p>Выходов</p>
+                                                </div>
+                                                <div class="text-info__number">
+                                                    <p>1,413,845,645</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    -->
+                                    <div class="column__wrapper">
+                                        <div class="column__cell">
+                                            <div class="info-s__ico">
+                                                <picture><source srcset="img/info-s/icon-3.svg" type="image/webp"><img src="img/info-s/icon-3.svg" alt="icon-1"></picture>
+                                            </div>
+                                            <div class="info-s__text text-info">
+                                                <div class="text-info__title">
+                                                    <p>Транзакций</p>
+                                                </div>
+                                                <div class="text-info__number">
+                                                    <p>532,856,595</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column__wrapper">
+                                        <div class="column__cell">
+                                            <div class="info-s__ico">
+                                                <picture><source srcset="img/info-s/icon-4.svg" type="image/webp"><img src="img/info-s/icon-4.svg" alt="icon-1"></picture>
+                                            </div>
+                                            <div class="info-s__text text-info">
+                                                <div class="text-info__title">
+                                                    <p>Время после блока</p>
+                                                </div>
+                                                <div class="text-info__number">
+                                                    <p>00:17:37</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-2">
+                <div class="diagram">
+                    <div class="diagram__wrapper w-diagram">
+                        <div class="w-diagram__header header-diagram block-wrapper">
+                            <div class="block-wrapper__header">
+                                <h2>Стоимость</h2>
+                            </div>
+                            <!--
+                            <div class="header-diagram__path">
+                                <p>/metrica/horizontal/analytics/analytics-customers.html</p>
+                            </div>
+                            -->
+                        </div>
+                        <div class="w-diagram__body body-diagram">
+                            <!--
+                            <div class="body-diagram__icons">
+                                <ul>
+                                    <li><a href="#"><picture><source srcset="img/diagram/1.webp" type="image/webp"><img src="img/diagram/1.jpg" alt="icon"></picture></a></li>
+                                    <li><a href="#"><picture><source srcset="img/diagram/2.webp" type="image/webp"><img src="img/diagram/2.jpg" alt="icon"></picture></a></li>
+                                    <li><a href="#"><picture><source srcset="img/diagram/3.webp" type="image/webp"><img src="img/diagram/3.jpg" alt="icon"></picture></a></li>
+                                    <li><a href="#"><picture><source srcset="img/diagram/4.webp" type="image/webp"><img src="img/diagram/4.jpg" alt="icon"></picture></a></li>
+                                    <li><a href="#"><picture><source srcset="img/diagram/5.webp" type="image/webp"><img src="img/diagram/5.jpg" alt="icon"></picture></a></li>
+                                    <li><a href="#"><picture><source srcset="img/diagram/6.webp" type="image/webp"><img src="img/diagram/6.jpg" alt="icon"></picture></a></li>
+                                </ul>
+                            </div>
+                            -->
+                            <div class="body-diagram__diagram">
+                                <picture><source srcset="img/diagram/diagram.webp" type="image/webp"><img src="img/diagram/diagram.jpg" alt="diagram"></picture>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="block-3">
+                <div class="block-3__wrapper block-wrapper">
+                    <div class="block-3__small">
+                        <div class="block-wrapper__header">
+                            <h2>Распределение хешрейта</h2>
+                        </div>
+                        <div class="block-3__diagram">
+                            <picture><source srcset="img/pie-chart.svg" type="image/webp"><img src="img/pie-chart.svg" alt="diagram"></picture>
+                        </div>
+                    </div>
+                    <div class="block-3__big" >
+                        <div class="block-wrapper__header">
+                            <h2>Последние блоки</h2>
+                        </div>
+                        <div class="block-3__table table table-c">
+                            <table>
+                                <thead>
+                                    <tr class="table__header">
+                                        <th>Номер</th>
+                                        <th>Хэш</th>
+                                        <th>Сгенерирован</th>
+                                        <th class="t-aling">Выходы (BTC)</th>
+                                        <th>Выходы (USD)</th>
+                                    </tr>
+                                </thead>
+                                <tbody> 
+                                    <tr class="table__body">
+                                        <td><span class="t-blue">631658</span></td>
+                                        <td><span class="t-blue">0...g83cb3aa9</span></td>
+                                        <td><span>25.05.2020</span><span class="t-time">12:54</span></td>
+                                        <td class="t-aling"><span>11,403.69</span><span class="t-grey">300532</span></td>
+                                        <td><span>644,931,000</span><span class="t-grey">.00</span></td>
+                                    </tr>
+                                    <tr class="table__body">
+                                        <td><span class="t-blue">631658</span></td>
+                                        <td><span class="t-blue">0...g83cb3aa9</span></td>
+                                        <td><span>25.05.2020</span><span class="t-time">12:54</span></td>
+                                        <td class="t-aling"><span>11,403.69</span><span class="t-grey">300532</span></td>
+                                        <td><span>644,931,000</span><span class="t-grey">.00</span></td>
+                                    </tr>
+                                    <tr class="table__body">
+                                        <td><span class="t-blue">631658</span></td>
+                                        <td><span class="t-blue">0...g83cb3aa9</span></td>
+                                        <td><span>25.05.2020</span><span class="t-time">12:54</span></td>
+                                        <td class="t-aling"><span>11,403.69</span><span class="t-grey">300532</span></td>
+                                        <td><span>644,931,000</span><span class="t-grey">.00</span></td>
+                                    </tr>
+                                    <tr class="table__body">
+                                        <td><span class="t-blue">631658</span></td>
+                                        <td><span class="t-blue">0...g83cb3aa9</span></td>
+                                        <td><span>25.05.2020</span><span class="t-time">12:54</span></td>
+                                        <td class="t-aling"><span>11,403.69</span><span class="t-grey">300532</span></td>
+                                        <td><span>644,931,000</span><span class="t-grey">.00</span></td>
+                                    </tr>
+                                    <tr class="table__body">
+                                        <td><span class="t-blue">631658</span></td>
+                                        <td><span class="t-blue">0...g83cb3aa9</span></td>
+                                        <td><span>25.05.2020</span><span class="t-time">12:54</span></td>
+                                        <td class="t-aling"><span>11,403.69</span><span class="t-grey">300532</span></td>
+                                        <td><span>644,931,000</span><span class="t-grey">.00</span></td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <div class="big-footer table__footer">
+                            <div class="loading-results bitcoin-result">
+                                <p><a href="#">Загрузить ещё <span>(630,<i>786</i> результатов) →</span></a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="block-4">
+                <div class="block-4__wrapper block-wrapper">
+                    <div class="block-4__small">
+                        <div class="block-wrapper__header">
+                            <h2>Неподтвержденные транзакции</h2>
+                        </div>
+
+                        <div class="block-4__table table">
+                            <table>
+                                <tbody>
+                                    <tr class="table__body">
+                                        <td><span class="t-blue">e8d82...8198d</span></td>
+                                        <td><span>0.148787 BTC</span></td>
+                                        <td><span>80.36 ś/vByte</span></td>
+                                    </tr>
+                                    <tr class="table__body">
+                                        <td><span class="t-blue">e8d82...8198d</span></td>
+                                        <td><span>0.148787 BTC</span></td>
+                                        <td><span>80.36 ś/vByte</span></td>
+                                    </tr>
+                                    <tr class="table__body">
+                                        <td><span class="t-blue">e8d82...8198d</span></td>
+                                        <td><span>0.148787 BTC</span></td>
+                                        <td><span>80.36 ś/vByte</span></td>
+                                    </tr>
+                                    <tr class="table__body">
+                                        <td><span class="t-blue">e8d82...8198d</span></td>
+                                        <td><span>0.148787 BTC</span></td>
+                                        <td><span>80.36 ś/vByte</span></td>
+                                    </tr>
+                                    <tr class="table__body">
+                                        <td><span class="t-blue">e8d82...8198d</span></td>
+                                        <td><span>0.148787 BTC</span></td>
+                                        <td><span>80.36 ś/vByte</span></td>
+                                    </tr>
+                                    <tr class="table__body">
+                                        <td><span class="t-blue">e8d82...8198d</span></td>
+                                        <td><span>0.148787 BTC</span></td>
+                                        <td><span>80.36 ś/vByte</span></td>
+                                    </tr>
+                                    <tr class="table__body">
+                                        <td><span class="t-blue">e8d82...8198d</span></td>
+                                        <td><span>0.148787 BTC</span></td>
+                                        <td><span>80.36 ś/vByte</span></td>
+                                    </tr>
+                                    <tr class="table__body">
+                                        <td><span class="t-blue">e8d82...8198d</span></td>
+                                        <td><span>0.148787 BTC</span></td>
+                                        <td><span>80.36 ś/vByte</span></td>
+                                    </tr>
+                                    <tr class="table__body">
+                                        <td><span class="t-blue">e8d82...8198d</span></td>
+                                        <td><span>0.148787 BTC</span></td>
+                                        <td><span>80.36 ś/vByte</span></td>
+                                    </tr>
+                                    <tr class="table__body">
+                                        <td><span class="t-blue">e8d82...8198d</span></td>
+                                        <td><span>0.148787 BTC</span></td>
+                                        <td><span>80.36 ś/vByte</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="block-4__stop">
+                            <div class="stop"></div>
+                        </div>
+                    </div>
+                    <div class="block-4__big" >
+                        <div class="block-wrapper__header">
+                            <h2>Распределение уровня комиссий</h2>
+                        </div>
+                        <div class="block-4__diagram diagram-b4">
+                            <div class="diagram-b4__value">
+                                <ul>
+                                    <li class="li-green">>300</li>
+                                    <li class="li-green">200 - 250</li>
+                                    <li class="li-green">160 - 180</li>
+                                    <li class="li-green">130 - 140</li>
+                                    <li class="li-green">110 - 120</li>
+                                    <li class="li-green"> 90 - 100</li>
+                                    <li class="li-green">70 - 80</li>
+                                    <li class="li-green">50 - 60</li>
+                                    <li class="li-green">30 - 35</li>
+                                    <li class="li-yellow">15 - 20</li>
+                                    <li class="li-yellow">8 - 10</li>
+                                    <li class="li-yellow">5 - 6</li>
+                                    <li class="li-yellow">3 - 4</li>
+                                    <li class="li-red">1 - 2</li>
+                                </ul>
+                            </div>
+                            <div class="diagram">
+                                <div class="diagram__d">
+                                    <picture><source srcset="img/vertical_chart.svg" type="image/webp"><img src="img/vertical_chart.svg" alt="diagram"></picture>
+                                </div>
+
+                                <div class="diagram__value">
+                                    <ul>
+                                        <li>1k</li>
+                                        <li>10k</li>
+                                        <li>100k</li>
+                                        <li>1M</li>
+                                        <li>10M</li>
+                                        <li>100M</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<footer class="footer">
+    <div class="footer__wrapper _container">
+        <div class="footer__body body-f">
+            <div class="body-f__state">
+                <p><span>Состояние</span></p>
+            </div>
+            <div class="body-f__localization">
+                <span>Локализация</span>
+            </div>
+            <div class="body-f__nav">
+                <ul>
+                    <li><a href="#">О проекте</a></li>
+                    <li><a href="#">Пользовательское соглашение</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Обратная связь</a></li>
+                </ul>
+            </div>
+            <div class="body-f__language">
+                <ul>
+                    <li><a href="#">Русский</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__info info-f">
+            <div class="info-f__copyright">
+                <p>© 2020 Mexm.io</p>
+            </div>
+            <div class="info-f__version">
+                <p>Версия 1.18.9</p>
+            </div>
+        </div>
+
+    </div>
+</footer>
+</div>
+</body>
+</html>
