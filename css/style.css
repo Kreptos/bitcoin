@@ -1303,11 +1303,23 @@ input:focus {
 } */
 
 .chart__svg{
-
   border-radius: 10px;
   margin-bottom: 14px;
 }
 
+
+.focusBG{
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  fill: white;
+  border-radius: 5px;
+}
+
+.focusText{
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  color: pink;
+}
 
 .block__header{
     
