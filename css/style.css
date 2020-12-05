@@ -1248,6 +1248,67 @@ input:focus {
     border-radius: 10px;
 }
 
+.price__body{
+    
+  height: 92%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.price__inner{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.price__item{
+  width: 25%;
+  margin-top: 14px;
+
+  text-align: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: #393939;
+}
+
+.price__item span{
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+
+  color: #FF1C45;
+  margin-left: 14px;
+}
+
+.chart__body{
+  vertical-align: bottom;
+  
+}
+
+.area__chart{
+  /* display: inline-block;
+  vertical-align: bottom; */
+  height: auto;
+  border-radius: 10px;
+}
+
+/* .chart__g{
+  display: flex;
+  justify-content: flex-start;
+  
+} */
+
+.chart__svg{
+
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+
 .block__header{
     
     border-bottom: 1px solid #F3F3F3;    
@@ -1266,32 +1327,28 @@ input:focus {
     
 }
 
-.price__body{
-    
-    
-    
-    
-}
+
 
 
 .hashrate{
-    padding: 14px;
-    
-    margin-left: 14px;
-    
-    width: 357px;
-    
-    
-    background: #fff;
-    
-    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+  padding: 14px;
+  
+  margin-left: 14px;
+  
+  width: 357px;
+  
+  
+  background: #fff;
+  
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 
 .hashrate__body{
-    
-    
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
 }
 
 .donut{
@@ -1309,11 +1366,40 @@ input:focus {
 
 }
 
+.exchange_body{
+  width: auto;
+}
+
+.exchange_name{
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 7px;
+}
+
+.exchange_circle{
+  content: " ";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
 .donut_persent{
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
   top: 120px;
   left: 100px;
   z-index: 1000;
+  text-align: center;
+  width: 30px;
 }
+
 
 .block_3_4{
     

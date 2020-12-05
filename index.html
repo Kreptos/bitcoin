@@ -1,1 +1,170 @@
-<!DOCTYPE html><html lang="en"><head>    <title>MEXM.IO</title>    <meta charset="UTF-8">    <meta name="format-detection" content="telephone=no">    <meta name="viewport" content="width=device-width, initial-scale=1 " > <!--, maximum-scale=1.0, user-scalable=0-->    <!-- Стили CSS-->    <link href="css/style.min.css" rel="stylesheet" />    <!-- Скривты JavaScript-->    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>    <script src="js/script.min.js"></script>    <!-- Иконка-->    <link rel="shortcut icon" href="img/favicon.png" type="image/png"></head><body><div class="home-wrapper">    <header class="header home-header">        <div class="header__wrapper _container">            <div class="header__logo">                <picture><source srcset="img/logo.svg" type="image/webp"><img src="img/logo.svg" alt="logo"></picture>            </div>            <nav class="header__nav main-nav">                <div class="main-nav__wrapper">                    <div class="main-nav__header">                        <p>Меню</p>                    </div>                    <ul class="nav-first">                        <li>                            <a href="#">Проводник <span></span></a>                            <ul class="nav-second">                                <li>                                    <a href="#">Bitcoin<span></span></a>                                    <div class="nav-third">                                        <ul>                                            <li>Блокчейн</li>                                            <li><a href="#">Блоки</a></li>                                            <li><a href="#">Транзакции</a></li>                                            <li><a href="#">Выходы</a></li>                                        </ul>                                        <ul>                                            <li>Мемпул</li>                                            <li><a href="#">Транзакции</a></li>                                            <li><a href="#">Выходы</a></li>                                        </ul>                                    </div>                                </li>                                <li>                                    <a href="#">Ethereum<span></span></a>                                    <div class="nav-third">                                        <ul>                                            <li>Блокчейн</li>                                            <li><a href="#">Блоки</a></li>                                            <li><a href="#">Транзакции</a></li>                                            <li><a href="#">Выходы</a></li>                                        </ul>                                        <ul>                                            <li>Мемпул</li>                                            <li><a href="#">Транзакции</a></li>                                            <li><a href="#">Выходы</a></li>                                        </ul>                                    </div>                                </li>                                <li>                                    <a href="#">Litecoin<span></span></a>                                    <div class="nav-third">                                        <ul>                                            <li>Блокчейн</li>                                            <li><a href="#">Блоки</a></li>                                            <li><a href="#">Транзакции</a></li>                                            <li><a href="#">Выходы</a></li>                                        </ul>                                        <ul>                                            <li>Мемпул</li>                                            <li><a href="#">Транзакции</a></li>                                            <li><a href="#">Выходы</a></li>                                        </ul>                                    </div>                                </li>                            </ul>                        </li>                        <li>                            <a href="#">Сервисы <span></span></a>                            <ul class="nav-second">                                <li>                                    <a href="#">API</a>                                </li>                                <li>                                    <a href="#">Анализ</a>                                </li>                                <li>                                    <a href="#">Графики</a>                                </li>                            </ul>                        </li>                        <li>                            <a href="#">Другое <span></span></a>                            <ul class="nav-second">                                <li>                                    <a href="#">FAQ</a>                                </li>                                <li>                                    <a href="#">Связаться с нами</a>                                </li>                                <li>                                    <a href="#">Политика конфиденциальности</a>                                </li>                            </ul>                        </li>                    </ul>                    <div class="main-nav__footer footer-nav">                        <div class="footer-nav__language language">                            <div class="language__header">                                <p>Локализация</p>                            </div>                            <div class="language__body">                                <a href="#">Русский</a>                                <a href="#">English</a>                            </div>                        </div>                    </div>                </div>            </nav>            <div class="burger">                <span></span>            </div>        </div>    </header>    <main class="main _container">        <div class="main-unit">            <div class="main-unit__text">                <p><span>Mexm.io</span> — поисковик по блокчейну Bitcoin.</p>                <p>Вы можете найти транзакции, адреса, блоки, и даже записанный текст.</p>            </div>            <div class="main-unit__form">                <div class="main-unit__wrapper form-wrapper">                    <input type="search" placeholder="Поиск в блокчейн">                    <button class="main-unit__button"></button>                </div>            </div>        </div>    </main>    <footer class="footer home-footer">        <div class="footer__wrapper _container">            <div class="footer__info info-f">                <div class="info-f__version">                    <p>Версия 1.18.9</p>                </div>            </div>            <div class="footer__body body-f">                <div class="body-f__language">                    <ul>                        <li><a href="#">Русский</a></li>                        <li><a href="#">English</a></li>                    </ul>                </div>            </div>        </div>    </footer></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MEXM.IO</title>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1 " > <!--, maximum-scale=1.0, user-scalable=0-->
+
+    <!-- Стили CSS-->
+    <link href="css/style.min.css" rel="stylesheet" />
+
+    <!-- Скривты JavaScript-->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+
+    <script src="js/script.min.js"></script>
+
+    <!-- Иконка-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+
+</head>
+<body>
+<div class="home-wrapper">
+    <header class="header home-header">
+        <div class="header__wrapper _container">
+            <div class="header__logo">
+                <picture><source srcset="img/logo.svg" type="image/webp"><img src="img/logo.svg" alt="logo"></picture>
+            </div>
+            <nav class="header__nav main-nav">
+                <div class="main-nav__wrapper">
+                    <div class="main-nav__header">
+                        <p>Меню</p>
+                    </div>
+                    <ul class="nav-first">
+                        <li>
+                            <a href="#">Проводник <span></span></a>
+                            <ul class="nav-second">
+                                <li>
+                                    <a href="#">Bitcoin<span></span></a>
+                                    <div class="nav-third">
+                                        <ul>
+                                            <li>Блокчейн</li>
+                                            <li><a href="bitcoin.html">Блоки</a></li>
+                                            <li><a href="#">Транзакции</a></li>
+                                            <li><a href="#">Выходы</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li>Мемпул</li>
+                                            <li><a href="#">Транзакции</a></li>
+                                            <li><a href="#">Выходы</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Ethereum<span></span></a>
+                                    <div class="nav-third">
+                                        <ul>
+                                            <li>Блокчейн</li>
+                                            <li><a href="#">Блоки</a></li>
+                                            <li><a href="#">Транзакции</a></li>
+                                            <li><a href="#">Выходы</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li>Мемпул</li>
+                                            <li><a href="#">Транзакции</a></li>
+                                            <li><a href="#">Выходы</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Litecoin<span></span></a>
+                                    <div class="nav-third">
+                                        <ul>
+                                            <li>Блокчейн</li>
+                                            <li><a href="#">Блоки</a></li>
+                                            <li><a href="#">Транзакции</a></li>
+                                            <li><a href="#">Выходы</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li>Мемпул</li>
+                                            <li><a href="#">Транзакции</a></li>
+                                            <li><a href="#">Выходы</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Сервисы <span></span></a>
+                            <ul class="nav-second">
+                                <li>
+                                    <a href="#">API</a>
+                                </li>
+                                <li>
+                                    <a href="#">Анализ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Графики</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Другое <span></span></a>
+                            <ul class="nav-second">
+                                <li>
+                                    <a href="#">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Связаться с нами</a>
+                                </li>
+                                <li>
+                                    <a href="#">Политика конфиденциальности</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="main-nav__footer footer-nav">
+                        <div class="footer-nav__language language">
+                            <div class="language__header">
+                                <p>Локализация</p>
+                            </div>
+                            <div class="language__body">
+                                <a href="#">Русский</a>
+                                <a href="#">English</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="burger">
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main _container">
+        <div class="main-unit">
+            <div class="main-unit__text">
+                <p><span>Mexm.io</span> — поисковик по блокчейну Bitcoin.</p>
+                <p>Вы можете найти транзакции, адреса, блоки, и даже записанный текст.</p>
+            </div>
+            <div class="main-unit__form">
+                <div class="main-unit__wrapper form-wrapper">
+                    <input type="search" placeholder="Поиск в блокчейн">
+                    <button class="main-unit__button"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer home-footer">
+        <div class="footer__wrapper _container">
+            <div class="footer__info info-f">
+                <div class="info-f__version">
+                    <p>Версия 1.18.9</p>
+                </div>
+            </div>
+            <div class="footer__body body-f">
+                <div class="body-f__language">
+                    <ul>
+                        <li><a href="#">Русский</a></li>
+                        <li><a href="#">English</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
