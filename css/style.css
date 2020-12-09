@@ -1290,27 +1290,28 @@ input:focus {
 }
 
 .area__chart{
-  /* display: inline-block;
-  vertical-align: bottom; */
-  height: auto;
-  border-radius: 10px;
-}
-
-/* .chart__g{
-  display: flex;
-  justify-content: flex-start;
   
-} */
-
-.chart__svg{
+  height: auto;
+  
   border-radius: 10px;
   margin-bottom: 14px;
 }
 
+.chart__g{
+  
+}
+
+.chart__svg{
+  /* margin-bottom: 14px; */
+}
+
+.tspan{
+  color: red;
+}
 
 .focusBG{
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  fill: white;
+  fill: #eee;
   border-radius: 5px;
 }
 
@@ -1318,7 +1319,14 @@ input:focus {
   font-family: "Lato", sans-serif;
   font-size: 10px;
   font-weight: normal;
-  color: pink;
+  fill: #808080;
+}
+
+.focusPrice{
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  fill: #000;
 }
 
 .block__header{
@@ -1329,6 +1337,8 @@ input:focus {
 
 .block__header h2{
     
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 14px;
     
     font-weight: bold;
@@ -1337,6 +1347,15 @@ input:focus {
 
     color: #393939;
     
+}
+
+.block__header h2 a{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #3782E9;
 }
 
 
@@ -1358,6 +1377,8 @@ input:focus {
 
 
 .hashrate__body{
+  overflow: visible;
+  z-index: -1000;
   display: flex;
   justify-content: space-between;
   margin-top: 14px;
@@ -1365,36 +1386,40 @@ input:focus {
 
 .donut{
   
-  z-index: 1;
-  position: relative;
 }
 
-.donut svg{
-  z-index: inherit;
+.donut svg g{
+  text-anchor:start;
 }
 
 .hashrate__donut{
-  z-index: 1;
-
+  display: flex;
+  justify-content: flex-start;
+  /* margin-right:  */
+  align-items: flex-start;
+  text-align: left;
+  margin-left: -6px;
+  margin-bottom: -12px;
 }
 
 .exchange_body{
   width: auto;
+  height: 220px;
+  overflow-y: auto;
 }
 
 .exchange_name{
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
   line-height: 14px;
   margin-top: 7px;
 }
 
 .exchange_circle{
   content: " ";
-  width: 12px;
-  height: 12px;
+  /* width: 12px;
+  height: 12px; */
   border-radius: 50%;
   margin-right: 5px;
   display: inline-block;
@@ -1526,9 +1551,13 @@ input:focus {
     font-weight: normal;
     font-size: 14px;
     line-height: 36px;
-    padding: 0 20px 0 20px;
+    padding: 0 0 0 20px;
     border-bottom: 1px solid #F3F3F3; 
     border-collapse: collapse;
+}
+
+.transactions_table td{
+  padding-left: 0;
 }
 
 .table_body:hover{
@@ -1560,6 +1589,44 @@ input:focus {
     border-radius: 10px;
 }
 
+.commission__body{
+  margin-top: 58px;
+}
+
+/* Histogram */
+
+.histogram__svg{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.bar{
+  fill: #FF1C45;
+}
+
+.domain{
+  margin-bottom: 5px;
+}
+
+.xAxis .tick text{
+  fill: #393939;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 9px;
+  line-height: 11px;
+}
+
+.TransactionsText{
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  fill: black;
+}
+
 .transactions{
     width: 383px;
     height: 248px;
@@ -1571,7 +1638,71 @@ input:focus {
     border-radius: 10px;
 }
 
+.pause{
+  /* display:none; */
+  cursor: pointer;
+  font-size: 0;
+  background-color: transparent;
+  
+}
 
+.pause:active .pause_item{
+  display:block;
+}
+
+.pause:active .play_item{
+  display:none;
+}
+
+.pause_item{
+  display: block;
+  width: 16px;
+  height: 16px;
+  
+  position: relative;
+    
+}
+
+.pause_item:before,
+.pause_item:after{
+  content: "";
+  width: 6px;
+  height: 100%;
+  background-color: #CFE3FF;
+  position: absolute;
+
+}
+
+.pause_item:before{
+  right: 12px;
+}
+
+.play_item{
+  display: none;
+  width:0;
+  position: relative;
+}
+
+.play_item:before{
+  content: "";
+  width: 100%;
+  position: absolute;
+  border: 10px solid transparent;
+  border-left: solid 16px #CFE3FF;
+  border-radius: 2px;
+
+  top: -10px;
+  left: -18px;
+}
+
+
+
+
+
+
+
+
+/* ./Bitcoin */
 
 
 
@@ -2192,13 +2323,13 @@ body {
 }
 
 .etherium__body .currency-s__logo{
-    max-width: 32px;
-    height: 32px;
+    max-width: 36px;
+    height: 36px;
 }
 
 .etherium__body .currency-s__logo img{
-    max-width: 32px;
-    height: 32px;
+    max-width: 36px;
+    height: 36px;
 }
 
 .content .block-1 .statistics__header .currency-s__title {

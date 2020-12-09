@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <title>MEXM.IO</title>
     <meta charset="UTF-8">
@@ -18,6 +18,7 @@
     <script src="js/bitcoin/script.js" defer></script>
     <script src="js/d3/script1.js" defer></script>
     <script src="js/d3/area_chart3.js" defer></script>
+    <script src="js/d3/histogram.js" defer></script>
 
     <!-- Иконка-->
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
@@ -474,7 +475,7 @@
                     <div class="last__blocks">
                         <div class="block__header">
                             
-                            <h2>Последние блоки</h2>
+                            <h2 class="last_h2">Последние блоки <span><a href="#">Подробнее →</a></span></h2>
                             
                         </div>
                         
@@ -575,7 +576,14 @@
                             <div class="block__header">
                             
                             <h2>Распределение уровня комиссий</h2>
-                            
+
+                            </div>
+
+                            <div class="commission__body">
+                                <div class="commission__histogram">
+                                    <div class="histogram"></div>
+                                </div>
+                               
                             </div>
                         </div>
 
@@ -583,8 +591,46 @@
                         <div class="transactions">
                             <div class="block__header">
                             
-                                <h2>Неподтвержденные транзакции</h2>
+                                <h2>Неподтвержденные транзакции 
+                                    <button class="pause" type="button">
+                                        <span class="pause_item">p</span>
+                                        <span class="play_item">p</span>
+                                    </button> 
+                                </h2>
                             
+                            </div>
+
+                            <div class="transactions_body">
+                                <table class="last__blocks__table">
+                                    <tbody>
+                                        <tr class="table_body transactions_table">
+                                            <td><span class="t-blue">0g83•••3aa9</span></td>
+                                            <td>600.14<span class="t-grey">8787</span> BTC</td>
+                                            <td>80.36 ś/vByte</td>
+                                        </tr>
+                                        <tr class="table_body transactions_table">
+                                            <td><span class="t-blue">0g83•••3aa9</span></td>
+                                            <td>600.14<span class="t-grey">8787</span> BTC</td>
+                                            <td>80.36 ś/vByte</td>
+                                        </tr>
+                                        <tr class="table_body transactions_table">
+                                            <td><span class="t-blue">0g83•••3aa9</span></td>
+                                            <td>600.14<span class="t-grey">8787</span> BTC</td>
+                                            <td>80.36 ś/vByte</td>
+                                        </tr>
+                                        <tr class="table_body transactions_table">
+                                            <td><span class="t-blue">0g83•••3aa9</span></td>
+                                            <td>600.14<span class="t-grey">8787</span> BTC</td>
+                                            <td>80.36 ś/vByte</td>
+                                        </tr>
+                                        <tr class="table_body transactions_table">
+                                            <td><span class="t-blue">0g83•••3aa9</span></td>
+                                            <td>600.14<span class="t-grey">8787</span> BTC</td>
+                                            <td>80.36 ś/vByte</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
                             </div>
                         </div>
                     </div>
