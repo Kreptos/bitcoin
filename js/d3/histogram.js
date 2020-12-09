@@ -7,30 +7,21 @@ var play = d3.select(".pause")
         }
         else{
             f=true;
-        }
-        // if(d3.select(".play_item").style("display") == "none")
-        //     d3.select(".play_item").style("display", "block");
+        }    d3.select(".play_item").style("display", "block");
         
-
         if(f){
             d3.select(".pause_item").style("display", "none");
             d3.select(".play_item").style("display", "block");
-            // f = false;
         }
-
-
-        // if(d3.select(".play_item").style("display") == "block")
-        //     d3.select(".play_item").style("display", "none");
 
         if(!f){
             d3.select(".pause_item").style("display", "block");
             d3.select(".play_item").style("display", "none");
-            // f = true;
         }
     });
 
 
-d3.json("../../data/atad.json").then(function(data){
+d3.json("atad.json").then(function(data){
 
     var margin = {top: 5, bottom: 15, right: 5, left: 5},
         histWidth = 416 - margin.left - margin.right,
