@@ -38,6 +38,7 @@ d3.json("atad.json").then(function(data){
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+        
     var x = d3.scaleBand().range([0, histWidth]).padding(-1);
     var y = d3.scaleLinear().range([histHeight, 0]);
 

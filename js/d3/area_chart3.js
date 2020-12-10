@@ -2,20 +2,9 @@ var margin = {top: 5, right: 0, bottom: 0, left: 0},
     areaWidth = 880 - margin.left - margin.right,
     areaHeight = 150 - margin.top - margin.bottom;
 
-
   d3.select(".area__chart")
     .attr("rx", "10px")
     .attr("ry", "10px");
-
-
-
-// var svg1 = svg
-//   .append("svg")
-//   .attr("width", areaWidth)
-//   .attr("height", areaHeight)
-//   .attr("class", "chart__svg")
-//   .append("g")
-//   .attr("transform", "translate(" + 0 + "," + (-areaHeight) + ")");
 
 var svg = d3.select(".area__chart")
   .append("svg")
@@ -27,34 +16,32 @@ var svg = d3.select(".area__chart")
   .append("g")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");;
 
-  
+// var locale = d3.timeFormatLocale({
+//     "months": ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"],
+//     "shortMonths": ["янв", "фев", "мар", "апр", "май", "июн", "июл", "авг", "сен", "окт", "ноя", "дек"]
+//   });
+
+// var formatMonth = locale.format("%B");
 
 var x = d3.scaleTime().range([0, areaWidth ]);
 var y = d3.scaleLinear().range([areaHeight, 0 ]);
 
-
 d3.csv("xxx1.csv") //Чтение данных
     .then(function(data) {
 
-      
-
     data.forEach(function(d){
       d.Time = d3.timeParse("%b %d, %Y")(d.Time);
-      
-      // d.Time = d3.timeFormat("%Y-%m-%d")(d.Time);
-      // d.Time = d3.timeParse("%Y-%m-%d")(d.Time);
       d.Price = +d.Price.replace(',','.');
     });
 
-    // d3.timeFormatLocale("%b %d, %Y");
+    
 
     x.domain(d3.extent(data, function(d){return d.Time;}));
     y.domain([0, d3.max(data, function(d){return d.Price;})]);
 
     var bisect = d3.bisector(function(d){return d.Time}).left;
-
-   
-
+    
+    // var ru = d3.locale(<ru-RU definition/>);
 
     var area = d3.area()
       .x(function(d){return x(d.Time)})
@@ -69,29 +56,6 @@ d3.csv("xxx1.csv") //Чтение данных
       .y(function(d){return y(d.Price)})
       .curve(d3.curveCatmullRom.alpha(d3.curveBasis));
 
-    
-
-    
-
-      function rightRoundedRect(x, y, width, height, radius) {
-        return "M" + x + "," + y
-             + "h" + (width - radius)
-             + "a" + radius + "," + radius + " 0 0 1 " + radius + "," + radius
-             + "v" + (height - 2 * radius)
-             + "a" + radius + "," + radius + " 0 0 1 " + -radius + "," + radius
-             + "h" + (radius - width)
-             + "z";
-      }
-
-    // svg.append("g")
-    //   .attr("transform", "translate(0," + areaHeight + ")")
-    //   .call(d3.axisBottom(x));
-
-    // svg.append("g")
-    //   .call(d3.axisLeft(y));
-
-    
-
     svg.append("g")
       .append("path")
       .data([data])
@@ -100,11 +64,6 @@ d3.csv("xxx1.csv") //Чтение данных
       .attr("height", areaHeight)
       .style("border-radius", '10px')
       .attr("d", area);    
-
-    // svg
-    // .append("g")
-    // .style("overflow","visible")
-    // .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     
     svg.append("g")
       .append("path")
@@ -136,6 +95,30 @@ d3.csv("xxx1.csv") //Чтение данных
       .attr("r", "4px")
       .style("opacity", 0);
 
+    var defs = svg.append("defs");
+
+    var filter = defs.append("filter")
+      .attr("id", "dropshadow")
+      .attr("height", "120%");
+    
+    filter.append("feGaussianBlur")
+      .attr("in", "SourceAlpha")
+      .attr("stdDeviation", 2)
+      .attr("result", "blur");
+
+    filter.append("feOffset")
+      .attr("in", "blur")
+      .attr("dx", 0.4)
+      .attr("dy", 0.4)
+      .attr("result", "offsetBlur");
+    
+    var feMerge = filter.append("feMerge");
+    
+    feMerge.append("feMergeNode")
+      .attr("in", "offsetBlur")
+    feMerge.append("feMergeNode")
+      .attr("in", "SourceGraphic");
+    
     var focusBG = svg
       .append('rect')
       .attr("class", "focusBG")
@@ -144,10 +127,9 @@ d3.csv("xxx1.csv") //Чтение данных
       .attr("rx", "5")
       .attr("ry", "5")
       .style("opacity", 0)
-      .style("filter", "drop-shadow( 0 2px 1px black )")
-      .attr("text-anchor", "top")
-      .attr("alignment-baseline", "middle")
-      .attr("filter", "url(#dropshadow)");
+      .style("filter", "url(#dropshadow)")
+      .attr("text-anchor", "middle")
+      .attr("alignment-baseline", "middle");
 
     var focusText = svg
       .append("text")
@@ -163,12 +145,6 @@ d3.csv("xxx1.csv") //Чтение данных
       .attr("text-anchor", "left")
       .attr("alignment-baseline", "middle");
 
-
-    // focusText.append("g")
-    //   .append("rect")
-    //   .style("fill", 'white')
-    //   .style("opacity", 1);
-
     svg.append("rect")
       .style("fill", "none")
       .style("pointer-events", "all")
@@ -183,36 +159,6 @@ d3.csv("xxx1.csv") //Чтение данных
       .on("mousemove", mousemove)
       .on("mouseout", mouseout);
 
-
-      
-    // var defs = svg.append("defs");
-
-    // var filter = defs.append("filter")
-    //   .attr("id", "dropshadow")
-    
-    // filter.append("feGaussianBlur")
-    //   .attr("in", "SourceAlpha")
-    //   .attr("stdDeviation", 4)
-    //   .attr("result", "blur");
-    // filter.append("feOffset")
-    //   .attr("in", "blur")
-    //   .attr("dx", 2)
-    //   .attr("dy", 2)
-    //   .attr("result", "offsetBlur");
-    
-    // var feMerge = filter.append("feMerge");
-    
-    // feMerge.append("feMergeNode")
-    //   .attr("in", "offsetBlur")
-    // feMerge.append("feMergeNode")
-    //   .attr("in", "SourceGraphic");
-
-    // var month = d3.timeFormat('%B')(function(d){
-    //   return d.Month;
-    // });
-
-
-
     function rightRoundedRect(x, y, width, height, radius) {
       return "M" + x + "," + y
            + "h" + (width - radius)
@@ -223,7 +169,6 @@ d3.csv("xxx1.csv") //Чтение данных
            + "z";
     }
 
-
     function mouseover(){
       focus.style("opacity", 1);
       focusText.style("opacity", 1);
@@ -232,9 +177,6 @@ d3.csv("xxx1.csv") //Чтение данных
       d3.select(".mouse-line").style("opacity", 1);
       vertLine.style("opacity", "0.2");
       horzLine.style("opacity", "0.2");
-      
-
-
     }
 
     function mousemove(){
@@ -268,16 +210,6 @@ d3.csv("xxx1.csv") //Чтение данных
         focusPrice
           .attr("x", x(selectedData.Time) - 15);
       }
-      // if(focus.attr("cx") > 70){
-      //   focusBG
-      //     .attr("x", x(selectedData.Time) - 20);
-
-      //   focusText
-      //     .attr("x", x(selectedData.Time) - 15);
-
-      //   focusPrice
-      //     .attr("x", x(selectedData.Time) - 15);
-      // }
 
       focusBG
         .attr("y", y(selectedData.Price) - 45);
@@ -290,7 +222,12 @@ d3.csv("xxx1.csv") //Чтение данных
         .html(selectedData.Price)
         .attr("y", y(selectedData.Price) - 22);
 
-      // console.log(d3.timeFormat("%d %B, %Y")(selectedData.Time));
+      // console.log(d3.timeFormat("%d %B, %Y")(d3.localeselectedData.Time));
+      
+
+      // var format = d3.timeFormat("%d %B, %Y")(selectedData.Time);
+
+      // console.log(d3.timeFormatLocale("%d %B %Y")(format));
       
       d3.select(".mouse-line")
         .attr("x", x(selectedData.Time))
@@ -305,5 +242,4 @@ d3.csv("xxx1.csv") //Чтение данных
       focusPrice.style("opacity", 0);
       focusBG.style("opacity", 0);
     }
-
  });
